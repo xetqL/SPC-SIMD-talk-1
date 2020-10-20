@@ -1,9 +1,9 @@
-CC=clang++
+CC=g++
 CFLAGS=-std=c++17 -O3 -march=native
 CVEC=-ftree-loop-vectorize -Rpass-analysis=loop-vectorize
-CNOVEC=-fno-slp-vectorize -fno-tree-vectorize #-fno-tree-loop-vectorize
+CNOVEC=-fno-tree-loop-vectorize
 all: vec novec assembly
-MUL=MUL
+MUL=FMA
 vec: main.cpp
 	$(CC) main.cpp -D$(MUL) -DVEC=1 $(CFLAGS) -o vec
 novec: main.cpp

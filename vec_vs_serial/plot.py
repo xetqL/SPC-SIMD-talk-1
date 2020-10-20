@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-title = 'Vector multiplication benchmark it = 10M'
+title = 'Vector fused multiply add benchmark it = 10M'
 ser = np.genfromtxt('ser-benchmark.data', delimiter=' ')  
 vec = np.genfromtxt('vec-benchmark.data', delimiter=' ')
 plt.figure()
